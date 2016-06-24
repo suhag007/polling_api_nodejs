@@ -92,5 +92,26 @@ router.all('/login', function (req, res, next) {
         });
 });
 
+router.all('/list_users', function (req, res, next) {
+    table_users.find({
+    }).exec(function (err, users) {
+            if (err) {
+                next(err);
+            } else {
+                if (users) {
+                    res.json({
+                        error: 0,
+                        data : users
+                    });
+                } else {
+                    res.json({
+                        error: 1,
+                        data : 'no user found'
+                    });
+                }
+            }
+        });
+});
+
 
 module.exports = router;

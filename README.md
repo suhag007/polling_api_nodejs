@@ -33,3 +33,6 @@ Response :
 
 Response : 
 {"error":0,"data":{"title":"first polll","options":[{"option":"opt1","vote":0},{"option":"opt2","vote":0},{"option":"opt3","vote":0},{"option":"opt4","vote":0}],"id":"5770d42ca2dde3b0239044b2"}}
+
+## 4. List All Polls
+/list_polls

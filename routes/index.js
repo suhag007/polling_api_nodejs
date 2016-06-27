@@ -154,5 +154,26 @@ router.all('/add_poll', function (req, res, next) {
 
 });
 
+router.all('/list_polls', function (req, res, next) {
+    table_polls.find({
+    }).exec(function (err, polls) {
+            if (err) {
+                next(err);
+            } else {
+                if (polls) {
+                    res.json({
+                        error: 0,
+                        data : polls
+                    });
+                } else {
+                    res.json({
+                        error: 1,
+                        data : 'no poll found'
+                    });
+                }
+            }
+        });
+});
+
 
 module.exports = router;

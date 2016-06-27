@@ -15,14 +15,18 @@ var users = mongoose.Schema({}, {
 });
 var table_users = conn.model('users', users);
 
+var polls = mongoose.Schema({}, {
+    strict: false,
+    collection: 'polls'
+});
+var table_polls = conn.model('polls', polls);
+
 
 router.all('/add_user', function (req, res, next) {
     var username = req.query.username;
     var password = req.query.password;
     var role = req.query.role;
     
-    var UserModel = req.table_users;
-
     var userObj = {
         username : username,
         password : password,
@@ -63,8 +67,6 @@ router.all('/login', function (req, res, next) {
     var username = req.query.username;
     var password = req.query.password;
     
-    var UserModel = req.table_users;
-
     var userObj = {
         username : username,
         password : password,
@@ -111,6 +113,45 @@ router.all('/list_users', function (req, res, next) {
                 }
             }
         });
+});
+
+
+router.all('/add_poll', function (req, res, next) {
+    var title = req.query.title;
+    var options = req.query.options;
+
+    var final_options = [];
+
+    split_options = options.split('____');
+
+    for( var k in split_options ){
+        kk = split_options[k];
+        final_options.push({
+            option : kk,
+            vote : 0*1
+        })
+    }
+
+    var pollObj = {
+        title : title,
+        options : final_options
+    };
+
+
+    var model = new table_polls(pollObj);
+    model.save(function (err) {
+        if (err) {
+            next(err);
+        } else {
+            var id = model._id;
+            pollObj.id = id;
+            res.json({
+                error: 0,
+                data: pollObj
+            });
+        }
+    });
+
 });
 
 

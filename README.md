@@ -42,3 +42,6 @@ Response :
 
 ## 6. Vote Api
 /do_vote?id=577212fdd1bba33c17b5b64e&option_text=nodejs
+
+## 7. Add New Option to a poll
+/add_new_option?id=577212fdd1bba33c17b5b64e&option_text=arunkumar

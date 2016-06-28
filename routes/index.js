@@ -250,4 +250,49 @@ router.all('/do_vote', function (req, res, next) {
 });
 
 
+router.all('/add_new_option', function (req, res, next) {
+    var id = req.query.id;
+    var option_text = req.query.option_text;
+    table_polls.findOne({
+        '_id' : id
+    }).exec(function (err, poll) {
+            if (err) {
+                next(err);
+            } else {
+                if (poll) {
+                    poll_options = poll.get('options');
+                    var new_options = poll_options ;
+                    new_options.push({
+                        vote : 0*1,
+                        option : option_text
+                    })
+                    table_polls.update({
+                        _id: id
+                    }, {
+                        $set: {
+                            options: new_options
+                        }
+                    }, function (err) {
+                        if (err) {
+                            res.json({
+                                error: 1
+                            });
+                        } else {
+                            res.json({
+                                error: 0
+                            });
+                        }
+                    });
+                    
+                } else {
+                    res.json({
+                        error: 1,
+                        data : 'poll not found'
+                    });
+                }
+            }
+        });
+});
+
+
 module.exports = router;

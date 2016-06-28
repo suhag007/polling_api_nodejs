@@ -45,3 +45,13 @@ Response :
 
 ## 7. Add New Option to a poll
 /add_new_option?id=577212fdd1bba33c17b5b64e&option_text=arunkumar
+
+## 8. Delete poll option
+/delete_poll_option?id=577212fdd1bba33c17b5b64e&option_text=java
+
+## 9. Update Poll Title
+/update_poll_title?id=577212fdd1bba33c17b5b64e&title=newtitle
+
+## 10. Delete Poll
+/delete_poll?id=577212fdd1bba33c17b5b64e
+

@@ -39,3 +39,6 @@ Response :
 
 ## 5. List a Poll
 /list_poll
+
+## 6. Vote Api
+/do_vote?id=577212fdd1bba33c17b5b64e&option_text=nodejs

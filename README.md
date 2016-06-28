@@ -36,3 +36,6 @@ Response :
 
 ## 4. List All Polls
 /list_polls
+
+## 5. List a Poll
+/list_poll

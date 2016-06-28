@@ -176,4 +176,32 @@ router.all('/list_polls', function (req, res, next) {
 });
 
 
+
+router.all('/list_poll', function (req, res, next) {
+    var id = req.query.id;
+    
+    console.log( id );
+    
+    table_polls.findOne({
+        '_id' : id
+    }).exec(function (err, poll) {
+            if (err) {
+                next(err);
+            } else {
+                if (poll) {
+                    res.json({
+                        error: 0,
+                        data : poll
+                    });
+                } else {
+                    res.json({
+                        error: 1,
+                        data : 'poll not found'
+                    });
+                }
+            }
+        });
+});
+
+
 module.exports = router;

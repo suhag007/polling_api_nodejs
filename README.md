@@ -7,20 +7,20 @@ Refer - https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-
 Refer - http://blog.khairulazam.net/2013/05/19/install-rockmongo-on-ubuntu/
 
 #### How to run
-$ git clone https://github.com/excellencetechnologies/etech_testing_api.git
-$ cd etech_testing_api
-$ cd npm install
-$ npm start
+git clone https://github.com/excellencetechnologies/etech_testing_api.git
+cd etech_testing_api
+cd npm install
+npm start
 
-then open localhost:3000,  
+then open localhost:3000
 which will show "Welcome to Express" on page.
 
 Now you are ready to use api's
 
 
-## API Details
+#### API Details
 
-## 1. Add User
+##### 1. Add User
 /add_user?username=admin&password=admin&role=admin
 
 Response : 
@@ -30,7 +30,7 @@ User Already exists
 User created 
 {"error":0,"data":{"username":"admian","password":"admin","role":"admin","id":"576d03da647a7ae24332fe48"}}
 
-## 2. Login
+##### 2. Login
 /login?username=admin&password=admin
 
 Response : 
@@ -40,36 +40,36 @@ Success login
 Fail login
 {"error":1,"data":"user not exists"}
 
-## 3. List Users
+##### 3. List Users
 /list_users
 
 Response : 
 {"error":0,"data":[{"username":"admin","password":"admin","role":"admin","_id":"576bc39508d7faee3abf9306","__v":0},{"username":"guest","password":"guest","role":"guest","_id":"576bc6f7aa9e68513b55d410","__v":0},{"username":"admian","password":"admin","role":"admin","_id":"576d03da647a7ae24332fe48","__v":0}]}
 
-## 4. Add New Poll
+##### 4. Add New Poll
 /add_poll?title=first%20polll&options=opt1____opt2____opt3____opt4
 
 Response : 
 {"error":0,"data":{"title":"first polll","options":[{"option":"opt1","vote":0},{"option":"opt2","vote":0},{"option":"opt3","vote":0},{"option":"opt4","vote":0}],"id":"5770d42ca2dde3b0239044b2"}}
 
-## 4. List All Polls
+##### 5. List All Polls
 /list_polls
 
-## 5. List a Poll
+##### 6. List a Poll
 /list_poll
 
-## 6. Vote Api
+##### 7. Vote Api
 /do_vote?id=577212fdd1bba33c17b5b64e&option_text=nodejs
 
-## 7. Add New Option to a poll
+##### 8. Add New Option to a poll
 /add_new_option?id=577212fdd1bba33c17b5b64e&option_text=arunkumar
 
-## 8. Delete poll option
+##### 9 Delete poll option
 /delete_poll_option?id=577212fdd1bba33c17b5b64e&option_text=java
 
-## 9. Update Poll Title
+##### 10. Update Poll Title
 /update_poll_title?id=577212fdd1bba33c17b5b64e&title=newtitle
 
-## 10. Delete Poll
+##### 11. Delete Poll
 /delete_poll?id=577212fdd1bba33c17b5b64e
 

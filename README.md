@@ -1,19 +1,19 @@
 ## Api's for poll management system
 
 ### Requirements
-1. Install mongo db on your local
-Refer - https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04
-2. Install Rockmongo to ( GUI for mongo )
-Refer - http://blog.khairulazam.net/2013/05/19/install-rockmongo-on-ubuntu/
+1. Install mongo db on your local <br />
+Refer - https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04 <br />
+2. Install Rockmongo to ( GUI for mongo ) <br />
+Refer - http://blog.khairulazam.net/2013/05/19/install-rockmongo-on-ubuntu/ <br />
 
 #### How to run
-git clone https://github.com/excellencetechnologies/etech_testing_api.git
-cd etech_testing_api
-cd npm install
-npm start
-
-then open localhost:3000
-which will show "Welcome to Express" on page.
+git clone https://github.com/excellencetechnologies/etech_testing_api.git <br />
+cd etech_testing_api <br />
+cd npm install <br />
+npm start <br />
+ <br />
+then open localhost:3000 <br />
+which will show "Welcome to Express" on page. <br />
 
 Now you are ready to use api's
 

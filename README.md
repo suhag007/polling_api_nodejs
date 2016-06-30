@@ -7,11 +7,19 @@ Refer - https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-
 Refer - http://blog.khairulazam.net/2013/05/19/install-rockmongo-on-ubuntu/ <br />
 
 #### How to run
-1. git clone https://github.com/excellencetechnologies/etech_testing_api.git <br />
-2. cd etech_testing_api <br />
-3. npm install <br />
-4. npm start <br /><br />
- 
+```bash
+$ git clone https://github.com/excellencetechnologies/etech_testing_api.git
+```
+```bash
+$ cd etech_testing_api
+```
+```bash
+$ npm install
+```
+```bash
+$ npm start
+```
+
 then open localhost:3000 <br />
 which will show "Welcome to Express" on page. <br />
 

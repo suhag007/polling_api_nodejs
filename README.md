@@ -40,7 +40,7 @@ http://144.76.34.244:3333/list_users/list_polls
 http://144.76.34.244:3333/list_users/list_poll
 
 ##### 7. Vote Api
-/do_vote?id=577212fdd1bba33c17b5b64e&option_text=nodejs
+http://144.76.34.244:3333/do_vote?id=577212fdd1bba33c17b5b64e&option_text=nodejs
 
 ##### 8. Add New Option to a poll
 http://144.76.34.244:3333/list_users/add_new_option?id=577212fdd1bba33c17b5b64e&option_text=arunkumar

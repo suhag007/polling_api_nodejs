@@ -67,3 +67,8 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+
+app.listen(3333, function () {
+  console.log('app listening on port 3333!');
+});

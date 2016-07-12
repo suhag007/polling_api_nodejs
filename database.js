@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 module.exports = function (mongoose) {
 
-    var conn = mongoose.createConnection('mongodb://localhost/test');
+    var conn = mongoose.createConnection('mongodb://localhost/etech_testing_api');
     
     
     var users = mongoose.Schema({}, {

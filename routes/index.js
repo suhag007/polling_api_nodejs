@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 
 var mongoose = require('mongoose');
-var conn = mongoose.createConnection('mongodb://localhost/test');
+var conn = mongoose.createConnection('mongodb://localhost/etech_testing_api');
 var users = mongoose.Schema({}, {
     strict: false,
     collection: 'users'

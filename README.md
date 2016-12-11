@@ -1,6 +1,5 @@
-For any issues contact @arun.etech on slack
 
-## Api's for poll management system
+## Api's for polling_nodejs
 
 
 ##### 1. Add User
@@ -55,4 +54,6 @@ http://144.76.34.244:3333/update_poll_title?id=577212fdd1bba33c17b5b64e&title=ne
 
 ##### 11. Delete Poll
 http://144.76.34.244:3333/delete_poll?id=577212fdd1bba33c17b5b64e
+
+
 
